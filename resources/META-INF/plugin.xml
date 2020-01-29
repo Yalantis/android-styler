@@ -1,0 +1,28 @@
+<idea-plugin>
+  <id>com.yalantis.androidstyler</id>
+  <name>Style Helper</name>
+  <version>1.0</version>
+  <vendor email="questions@yalantis.com" url="http://www.yalantis.com">Yalantis</vendor>
+
+  <description>This plugin is meant to help with creating Android styles.</description>
+
+  <idea-version since-build="173.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij"/>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="3421" class="com.yalantis.androidstyler.PasteAction" text="Paste Style" description="Paste style">
+
+      <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="PasteMultiple"/>
+
+      <add-to-group group-id="EditMenu" anchor="after" relative-to-action="CutCopyPasteGroup"/>
+
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+
+    </action>
+  </actions>
+
+</idea-plugin>
